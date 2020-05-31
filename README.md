@@ -13,7 +13,6 @@ Using Spark to Predict Churn with Insight Data Science
 ## File/directory tree
 
 ```
-
 - app
 | - template
 | |- master.html  # main page of web app
