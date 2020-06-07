@@ -25,15 +25,15 @@ Using Spark to Predict Churn with Insight Data Science
 |- process_data.py
 |- DisasterResponse.db   # database to save clean data to
 
-- models
-|- train_classifier.py
-|- classifier.pkl  # saved model
+- models # different model iterations (different ML classification algorithms, parameters, features, etc)
+|- final_model # one folder per model version
 
 - img
 |- screenshot.png # screenshot of the web app
 
 - README.md # this file
 - Sparkify.ipynb # working through 1st model iteration with sample data
+- final.ipynb # final model selected for the app
 ```
 
 ## TO DO: Instructions from Udacity:
