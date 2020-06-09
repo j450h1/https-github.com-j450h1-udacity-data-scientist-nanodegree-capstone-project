@@ -19,11 +19,9 @@ Using Spark to Predict Churn with Insight Data Science
 | |- go.html  # classification result page of web app
 |- run.py  # Flask file that runs app
 
-- data
-|- disaster_categories.csv  # data to process
-|- disaster_messages.csv  # data to process
-|- process_data.py
-|- DisasterResponse.db   # database to save clean data to
+- data - entire folder is gitignored due to large file size
+|- mini_sparkify_event_data.json  # raw data to process
+|- TRANSFORMED_mini_sparkify_event_data.csv  # data that has been transfromed
 
 - models # different model iterations (different ML classification algorithms, parameters, features, etc)
 |- final_model # one folder per model version
@@ -32,8 +30,10 @@ Using Spark to Predict Churn with Insight Data Science
 |- screenshot.png # screenshot of the web app
 
 - README.md # this file
+- transform_raw_to_user.py - take the raw data and transform to user level for modeling
 - Sparkify.ipynb # working through 1st model iteration with sample data
 - final.ipynb # final model selected for the app
+
 ```
 
 ## TO DO: Instructions from Udacity:
