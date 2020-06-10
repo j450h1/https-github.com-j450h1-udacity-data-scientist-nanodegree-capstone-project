@@ -87,7 +87,8 @@ def main():
     # export data
     OUT_FILENAME = f'TRANSFORMED_{IN_FILENAME.replace("json", "csv")}' 
     #https://stackoverflow.com/questions/36574617/how-to-write-csv-file-into-one-file-by-pyspark
-    user_df.coalesce(1).write.csv(str(Path.cwd() / "data" / OUT_FILENAME), mode="overwrite")
+    #user_df.coalesce(1).write.csv(str(Path.cwd() / "data" / OUT_FILENAME), mode="overwrite")
+    user_df.toPandas().to_csv(str(Path.cwd() / "data" / OUT_FILENAME), index = False)
 
     print(f"\nData has been transformed and saved as: {OUT_FILENAME}\n")
 
