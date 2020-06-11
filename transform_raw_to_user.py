@@ -1,7 +1,7 @@
 # import libraries
 from pyspark.sql import SparkSession
 from pathlib import Path # better file paths
-from pyspark.sql.functions import countDistinct, col, when, lit, count
+from pyspark.sql.functions import countDistinct, col, when, lit, count, expr
 from pyspark.sql.functions import max as sparkMax #https://stackoverflow.com/questions/36924873/
 import sys
 
@@ -35,6 +35,7 @@ def aggregate_to_user_level(df):
     sparkMax(col('churn')).alias('churn')\
     ,sparkMax(col('Gender')).alias('gender')\
     ,sparkMax(col('level')).alias('subscription_level')\
+    ,sparkMax(col('device_type')).alias('device_type')\
     ,sparkMax(when(col("page") == 'Upgrade', 1).otherwise(0)).alias('page_upgraded')
     ,sparkMax(when(col("page") == 'Downgrade', 1).otherwise(0)).alias('page_downgraded')
     ,count(when(col("auth") == 'Logged In', True)).alias('auth_logged_in_cnt')\
@@ -54,7 +55,10 @@ def aggregate_to_user_level(df):
     ,countDistinct('song').alias('song_cnt')\
     ,countDistinct('sessionId').alias('session_cnt')\
     ]
-
+    # Additional feature engineering
+    df = df.withColumn("device_type",\
+    expr("CASE WHEN rlike(userAgent, '(Windows|Mac|Linux)') THEN 'desktop' \
+    WHEN rlike(userAgent, 'iP')  THEN  'mobile' ELSE 'other' END AS device_type"))
     user_df = df.groupBy('userId')\
     .agg(*exprs)
 
