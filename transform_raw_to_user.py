@@ -57,7 +57,7 @@ def aggregate_to_user_level(df):
     ]
     # Additional feature engineering
     df = df.withColumn("device_type",\
-    expr("CASE WHEN rlike(userAgent, '(Windows|Mac|Linux)') THEN 'desktop' \
+    expr("CASE WHEN rlike(userAgent, '(Windows|Macintosh|Linux)') THEN 'desktop' \
     WHEN rlike(userAgent, 'iP')  THEN  'mobile' ELSE 'other' END AS device_type"))
     user_df = df.groupBy('userId')\
     .agg(*exprs)
