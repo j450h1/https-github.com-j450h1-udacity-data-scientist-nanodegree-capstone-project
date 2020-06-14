@@ -1,7 +1,11 @@
 # udacity-data-scientist-nanodegree-capstone-project
 This is the capstone project for the Udacity Data Scientist Nanodegree program.
 
-## Topic/Inspiration
+# Blog post
+
+
+
+## Topic/Inspiration/Motivation
 
 Using Spark to Predict Churn with Insight Data Science 
 (If you decide to complete this project, you can find a series of Spark lessons in the extra-curricular portion of your classroom, as well as a Spark Project Overview and Spark Project Workspace later in this Capstone Project module.)
@@ -13,11 +17,6 @@ Using Spark to Predict Churn with Insight Data Science
 ## File/directory tree
 
 ```
-- app
-| - template
-| |- master.html  # main page of web app
-| |- go.html  # classification result page of web app
-|- run.py  # Flask file that runs app
 
 - data - entire folder is gitignored due to large file size
 |- mini_sparkify_event_data.json  # raw data to process
@@ -32,9 +31,15 @@ Using Spark to Predict Churn with Insight Data Science
 - README.md # this file
 - transform_raw_to_user.py - take the raw data and transform to user level for modeling
 - Sparkify.ipynb # working through 1st model iteration with sample data
-- final.ipynb # final model selected for the app
+- final.ipynb # final model selected which is GBT
 
 ```
+## Libraries used
+
+* pyspark
+* plotly
+* pandas
+* pathLib
 
 ## TO DO: Instructions from Udacity:
 
