@@ -2,7 +2,7 @@
 
 # Blog post
 
-
+https://medium.com/@jsohi/what-type-of-users-cancel-their-music-subscriptions-1a6a42ccebae
 
 ## Motivation
 
