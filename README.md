@@ -33,4 +33,8 @@ This is the capstone project for the Udacity Data Scientist Nanodegree program. 
 
 ## Analysis results
 
-I found a Gradient Boosting Tree algorithm performed the best with this data and was able to make predictions with an F1 score of: **0.71**
+| Model Iteration   |    Model Type  |  F1 Score (test set) |
+|----------|:-------------:|------:|
+| 1 | Logistic Regression | 0.67 |
+| 2 | Random Forest   |  0.69 |
+| 3 | Gradient Boosted Trees | 0.71 |
