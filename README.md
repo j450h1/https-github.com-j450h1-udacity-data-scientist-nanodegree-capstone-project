@@ -31,7 +31,7 @@ This is the capstone project for the Udacity Data Scientist Nanodegree program. 
 * pandas
 * pathLib 
 
-## Analysis results
+## Analysis/model results
 
 | Model Iteration   |    Model Type  |  F1 Score (test set) |
 |----------|:-------------:|------:|
